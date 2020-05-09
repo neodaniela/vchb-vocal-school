@@ -1,0 +1,124 @@
+.slider-big {
+  margin-bottom: 35px;
+}
+
+.slider-big__item {
+  text-align: center;
+  padding: 0 5px;
+
+  height: 187px;
+}
+
+/* Слайдер */
+.slick-slider {
+  position: relative;
+  padding: 0;
+}
+
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+}
+
+/* Стрелки */
+.slick-arrow {
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 187px;
+
+  margin: 0;
+
+  z-index: 10;
+
+  font-size: 0;
+
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: 100%;
+
+  border: none;
+}
+
+.slick-arrow.slick-prev {
+  left: 0;
+  background-image: url(../img/button-left.svg);
+}
+
+.slick-arrow.slick-next {
+  right: 0;
+  background-image: url(../img/button-right.svg);
+}
+
+/* Точки (булиты) */
+.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+}
+
+.slick-dots li {
+  list-style: none;
+  margin: 0 5px;
+}
+
+.slick-dots li button{
+  font-size: 0;
+  width: 15px;
+  height: 15px;
+  margin-bottom: 30px;
+
+
+  background-color: #aaaaaa;
+  border-radius: 50%;
+
+  border: none;
+}
+
+/* Активная точка */
+.slick-dots li.slick-active button {
+  background-color: transparent;
+  border: 1px solid #aaaaaa;
+}
+
+@media (min-width: @tablet-width) {
+  .slider-big--1 {
+    margin-bottom: 105px;
+  }
+
+  .slider-big--1 .slider-big__item {
+    height: 120px;
+  }
+
+  .slider-big--1 .slider-big__image {
+    width: auto;
+    height: 120px;
+    opacity: 0.6;
+  }
+
+    .slider-big--1 .slick-arrow {
+    width: 17px;
+    height: 120px;
+
+    background-size: cover;
+    background-position: center;
+  }
+
+  .slick-dots li {
+    margin: 0 10px;
+  }
+
+  .slick-dots li button{
+    width: 20px;
+    height: 20px;
+  }
+}

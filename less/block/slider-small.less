@@ -1,0 +1,21 @@
+.slider-small {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .slider-small {
+    margin: 0 auto;
+    display: block;
+    width: 373px;
+    box-sizing: border-box;
+    border: 10px solid @dark-red;
+
+    z-index: -1;
+  }
+
+  .slider-small__item {
+    margin: 0;
+    padding: 0;
+    height: 260px;
+  }
+}

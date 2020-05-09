@@ -1,0 +1,67 @@
+@font-face {
+ font-family: "BlackDiamond";
+ src: url("../fonts/BlackDiamond.woff2") format("woff2"),
+        url("../fonts/BlackDiamond.woff") format("woff");
+}
+
+@font-face {
+ font-family: "CenturaRoundBlack";
+ src: url("../fonts/CenturaRoundBlack.woff2") format("woff2"),
+        url("../fonts/CenturaRoundBlack.woff") format("woff");
+}
+
+@font-face {
+ font-family: "CenturaRound";
+ src: url("../fonts/CenturaRound.woff2") format("woff2"),
+        url("../fonts/CenturaRound.woff") format("woff");
+}
+
+@font-face {
+ font-family: "GothamCond-Book";
+ src: url("../fonts/GothamCond-Book.woff2") format("woff2"),
+        url("../fonts/GothamCond-Book.woff") format("woff");
+}
+
+@font-face {
+ font-family: "GothamCond-Medium";
+ src: url("../fonts/GothamCond-Medium.woff2") format("woff2"),
+        url("../fonts/GothamCond-Medium.woff") format("woff");
+}
+
+@font-face {
+ font-family: "GothamCond-Light";
+ src: url("../fonts/GothamCond-Light.woff2") format("woff2"),
+        url("../fonts/GothamCond-Light.woff") format("woff");
+}
+
+body {
+  min-width: @mobile-width;
+  margin: 0;
+  padding: 0;
+
+  font-family: 'GothamCond-Book', 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: calc(16px * 1.2);
+  color: @main-text-color;
+  font-style: normal;
+
+  background-color: @main-background-color;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

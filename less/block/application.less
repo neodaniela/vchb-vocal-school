@@ -1,0 +1,149 @@
+.application {
+  position: relative;
+  margin: 0;
+  margin-bottom: 145px;
+  padding: 0;
+  padding-top: 200px;
+}
+
+.application::before {
+  content: "";
+  position: absolute;
+  width: 132px;
+  height: 203px;
+  left: 0;
+  top: 70px;
+
+  background-image: url('../img/logo-form.svg');
+  background-repeat: no-repeat;
+}
+
+.application__wrapper {
+  margin: 0 auto;
+  padding: 30px 15px;
+  width: 280px;
+  box-sizing: border-box;
+
+  background-color: @dark-red;
+}
+
+.application__heading {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+
+  font-family: 'CenturaRoundBlack', sans-serif;
+  font-size: 30px;
+  line-height: calc(30px * 1.2);
+  text-align: center;
+}
+
+.application__description {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  text-align: center;
+}
+
+.application__item {
+  margin: 0;
+  margin-bottom: 12px;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.application__input {
+  padding: 15px;
+
+  border: none;
+  border-radius: 3px;
+  opacity: 0.8;
+
+  font: inherit;
+}
+
+.application__button {
+  padding: 5px;
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+
+  font: inherit;
+  font-family: 'GothamCond-Light', sans-serif;
+  font-size: 24px;
+  line-height: calc(24px * 1.2);
+  text-align: center;
+  color: @main-background-color;
+  text-transform: none;
+
+  background-color: #ffffff;
+}
+
+@media (min-width: @tablet-width) {
+  .application {
+    padding-top: 300px;
+  }
+
+  .application::before {
+    width: 282px;
+    height: 372px;
+    top: 120px;
+
+    background-image: url('../img/logo-form-tablet.svg');
+  }
+
+  .application__wrapper {
+    padding: 40px 117px 83px 117px;
+    width: 648px;
+  }
+
+  .application__heading {
+    margin-bottom: 25px;
+
+    font-size: 48px;
+    line-height: calc(48px * 1.2);
+  }
+
+  .application__description {
+    margin-bottom: 30px;
+
+    font-size: 24px;
+    line-height: calc(24px * 1.2);
+  }
+
+  .application__description--small {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 354px;
+  }
+
+  .application__item {
+    margin-bottom: 15px;
+  }
+
+  .application__label {
+    font-family: 'GothamCond-Light', sans-serif;
+    font-size: 24px;
+    line-height: calc(24px * 1.2);
+  }
+
+  .application__input {
+    padding: 20px;
+
+    font: inherit;
+    font-size: 24px;
+    line-height: calc(24px * 1.2);
+  }
+
+  .application__button {
+    margin-top: 30px;
+    padding: 15px;
+    width: 100%;
+
+    font-size: 36px;
+    line-height: calc(36px * 1.2);
+  }
+}
