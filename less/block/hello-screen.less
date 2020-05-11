@@ -42,9 +42,7 @@
 
   .hello-screen__description {
     padding: 458px 60px 0 0;
-    text-align: right;
 
-    font-family: 'CenturaRound', sans-serif;
     font-size: 40px;
     line-height: calc(40px * 1.2);
   }
@@ -57,5 +55,31 @@
 
     font-size: 32px;
     line-height: calc(32px * 1.2);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .hello-screen {
+    margin-top: -34px;
+    min-height: 846px;
+
+    background-image: url('../img/background-photo-desktop.png');
+  }
+
+  .hello-screen__description {
+    padding: 585px 162px 0 0;
+
+    font-size: 56px;
+    line-height: calc(56px * 1.2);
+  }
+
+  .hello-screen__button {
+    width: 448px;
+    margin-top: 20px;
+    margin-right: 162px;
+    padding: 35px;
+
+    font-size: 45px;
+    line-height: calc(45px * 1.2);
   }
 }
