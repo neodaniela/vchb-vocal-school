@@ -187,4 +187,66 @@
   .teachers {
     padding: 60px 105px 0 105px;
   }
+
+  .teachers__item {
+    width: 990px;
+    min-height: 349px;
+    box-sizing: border-box;
+    padding: 20px 20px 20px 355px;
+
+    background: linear-gradient(to right, transparent 29%, rgba(134, 13, 13, 0.75) 29%, rgba(134, 13, 13, 0.75) 33%, @teacher-card-color 33%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .teachers__name {
+    position: static;
+    margin: 0;
+    padding: 0;
+
+    font-size: 36px;
+    line-height: calc(36px * 1.2);
+
+    transform: none;
+  }
+
+  .teachers__title {
+    position: static;
+    margin: 0;
+    margin-top: -5px;
+    padding: 0;
+    padding-left: 30px;
+
+    font-size: 33px;
+    line-height: calc(33px * 1.2);
+    color: @dark-red;
+    text-align: left;
+
+    z-index: 2;
+  }
+
+  .teachers__about {
+    margin: 0;
+    margin-top: 15px;
+    padding: 0;
+    text-align: left;
+
+    font-size: 20px;
+    line-height: calc(20px * 1.2);
+  }
+
+  .teachers__about--main {
+    text-align: left;
+  }
+
+  .teachers__button {
+    position: static;
+
+    margin: 0;
+    margin-top: auto;
+    padding: 10px 0;
+    width: 210px;
+  }
 }

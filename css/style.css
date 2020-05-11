@@ -49,6 +49,22 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.container {
+  border: 1px solid red;
+  width: 320px;
+  margin: 0 auto;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
 .button {
   display: block;
   font-family: 'CenturaRound', sans-serif;
@@ -108,6 +124,13 @@ img {
   .page-header__logo-wrapper::before {
     width: 106px;
     height: 118px;
+  }
+}
+@media (min-width: 1200px) {
+  .page-header {
+    padding-right: 105px;
+    background: linear-gradient(to right, #121212 50%, #870505 50%);
+    box-shadow: none;
   }
 }
 .main-nav {
@@ -217,22 +240,6 @@ img {
     line-height: calc(16px * 1.2);
   }
 }
-.container {
-  border: 1px solid red;
-  width: 320px;
-  margin: 0 auto;
-  padding: 0;
-}
-@media (min-width: 768px) {
-  .container {
-    width: 768px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1200px;
-  }
-}
 .hello-screen {
   margin: 0;
   padding: 0;
@@ -241,6 +248,9 @@ img {
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
+}
+.hello-screen__heading {
+  display: none;
 }
 .hello-screen__description {
   margin: 0;
@@ -282,22 +292,52 @@ img {
 }
 @media (min-width: 1200px) {
   .hello-screen {
-    margin-top: -34px;
-    min-height: 846px;
-    background-image: url('../img/background-photo-desktop.png');
+    min-height: 620px;
+    background-color: #870505;
+    background-image: url('../img/background-photo-full.jpg');
+    background-position: left top;
+    background-size: auto;
+  }
+  .hello-screen__wrapper {
+    width: 433px;
+    margin: 0;
+    padding: 77px 0 0 650px;
+  }
+  .hello-screen__heading {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-family: 'CenturaRoundBlack', sans-serif;
+    font-size: 115px;
+    line-height: calc(115px * 1.2);
+  }
+  .hello-screen__heading--small {
+    margin: 0;
+    margin-top: -50px;
+    margin-left: 183px;
+    padding: 0;
+    font-family: 'BlackDiamond', sans-serif;
+    color: #121212;
+    font-weight: normal;
   }
   .hello-screen__description {
-    padding: 585px 162px 0 0;
-    font-size: 56px;
-    line-height: calc(56px * 1.2);
+    margin: 0;
+    margin-top: -20px;
+    padding: 0;
+    font-size: 46px;
+    line-height: calc(46px * 1.2);
+    text-align: center;
   }
   .hello-screen__button {
-    width: 448px;
-    margin-top: 20px;
-    margin-right: 162px;
-    padding: 35px;
-    font-size: 45px;
-    line-height: calc(45px * 1.2);
+    width: 375px;
+    margin: 0 auto;
+    margin-top: 35px;
+    padding: 25px;
+    font-size: 37px;
+    line-height: calc(37px * 1.2);
+    color: #870505;
+    background-color: #ffffff;
+    float: none;
   }
 }
 .about-school {
@@ -350,7 +390,8 @@ img {
 }
 @media (min-width: 1200px) {
   .about-school {
-    padding: 135px 105px 150px 105px;
+    padding: 60px 105px 150px 105px;
+    background-position-y: 80px;
   }
   .about-school__heading {
     margin-top: 87px;
@@ -516,6 +557,54 @@ img {
 @media (min-width: 1200px) {
   .teachers {
     padding: 60px 105px 0 105px;
+  }
+  .teachers__item {
+    width: 990px;
+    min-height: 349px;
+    box-sizing: border-box;
+    padding: 20px 20px 20px 355px;
+    background: linear-gradient(to right, transparent 29%, rgba(134, 13, 13, 0.75) 29%, rgba(134, 13, 13, 0.75) 33%, #181b1f 33%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .teachers__name {
+    position: static;
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+    line-height: calc(36px * 1.2);
+    transform: none;
+  }
+  .teachers__title {
+    position: static;
+    margin: 0;
+    margin-top: -5px;
+    padding: 0;
+    padding-left: 30px;
+    font-size: 33px;
+    line-height: calc(33px * 1.2);
+    color: #870505;
+    text-align: left;
+    z-index: 2;
+  }
+  .teachers__about {
+    margin: 0;
+    margin-top: 15px;
+    padding: 0;
+    text-align: left;
+    font-size: 20px;
+    line-height: calc(20px * 1.2);
+  }
+  .teachers__about--main {
+    text-align: left;
+  }
+  .teachers__button {
+    position: static;
+    margin: 0;
+    margin-top: auto;
+    padding: 10px 0;
+    width: 210px;
   }
 }
 .gallery {
