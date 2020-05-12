@@ -8,54 +8,55 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div class="container">
 
-      <header class="page-header" id="page-header">
-        <div class="page-header__logo-wrapper">
-          <img class="page-header__logo-image" alt="Вокал через бокал - лого" src="img/logo-vchb-mobile.svg">
-        </div>
-        <nav class="main-nav main-nav--closed main-nav--nojs">
-          <button class="main-nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a href="#about-school">О школе</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#teachers">Преподы</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#gallery">Фотогалерея</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#price">Цены</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#reviews">Отзывы</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#form">Записаться</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-
-      <main class="page-main">
+      <div class="page-header__wrapper">
+        <header class="page-header" id="page-header">
+          <div class="page-header__logo-wrapper">
+            <img class="page-header__logo-image" alt="Вокал через бокал - лого" src="img/logo-vchb-mobile.svg">
+          </div>
+          <nav class="main-nav main-nav--closed main-nav--nojs">
+            <button class="main-nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="#about-school">О школе</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#teachers">Преподы</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#gallery">Фотогалерея</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#price">Цены</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#reviews">Отзывы</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#form">Записаться</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
 
         <section class="hello-screen">
           <div class="hello-screen__wrapper">
-            <h1 class="hello-screen__heading">Школа</h1>
-            <h1 class="hello-screen__heading hello-screen__heading--small">вокала</h1>
+            <h1 class="hello-screen__heading">Школа <span class="hello-screen__heading--small">вокала</span></h1>
             <p class="hello-screen__description">онлайн и в СПБ</p>
             <a href="#form" class="hello-screen__button button">Запой!</a>
           </div>
         </section>
+      </div>
 
-        <section class="about-school" id="about-school">
-          <h2 class="about-school__heading">С нами <br/> не соскучишься!</h2>
-          <p class="about-school__paragraph about-school__paragraph--small">Наливаем на уроках (кофеёк, чаёк и другие интересные напитки)</p>
-          <p class="about-school__paragraph">Поставим голос, научим петь с нуля, прокачаем твой вокал — будешь топчик</p>
-          <p class="about-school__paragraph">Наши преподы помогут тебе освоить эстрадный, джазовый, академический, народный, экстремальный и рок-вокал</p>
-        </section>
+      <main class="page-main">
+
+        <div class="container">
+          <section class="about-school" id="about-school">
+            <h2 class="about-school__heading">С нами <br/> не соскучишься!</h2>
+            <p class="about-school__paragraph about-school__paragraph--small">Наливаем на уроках (кофеёк, чаёк и другие интересные напитки)</p>
+            <p class="about-school__paragraph">Поставим голос, научим петь с нуля, прокачаем твой вокал — будешь топчик</p>
+            <p class="about-school__paragraph">Наши преподы помогут тебе освоить эстрадный, джазовый, академический, народный, экстремальный и рок-вокал</p>
+          </section>
 
         <section class="teachers" id="teachers">
           <h2 class="teachers__heading">Это всё они</h2>
@@ -303,7 +304,8 @@
             </form>
           </div>
         </section>
-      </main>
+      </div>
+    </main>
 
       <footer class="page-footer">
         <div class="page-footer__map">
@@ -321,7 +323,6 @@
           </div>
         </div>
       </footer>
-    </div>
 
     <script src="js/jquery-3.5.0.min.js"></script>
     <script src="js/slick.min.js"></script>

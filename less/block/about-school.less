@@ -1,10 +1,23 @@
 .about-school {
+  position: relative;
   margin: 0;
-  padding: 100px 20px  0 20px;
+  padding: 100px 20px 0 20px;
+}
 
-  background-image: url('../img/logo-about-school.svg');
-  background-position: top right;
+.about-school::before {
+  content: "";
+  position: absolute;
+
+  width: 234px;
+  height: 234px;
+
+  top: 0;
+  right: -80px;
+
+  background-image: url('../img/logo-transparent-red.svg');
   background-repeat: no-repeat;
+  background-size: contain;
+
 }
 
 .about-school__heading {
@@ -34,11 +47,14 @@
   .about-school {
     margin: 0;
     padding: 165px 30px 150px 30px;
+  }
 
-    background-image: url('../img/logo-about-school-tablet.svg');
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-position-y: 170px;
+  .about-school::before {
+    top: 130px;
+    right: -100px;
+
+    width: 550px;
+    height: 550px;
   }
 
   .about-school__heading {
@@ -62,7 +78,14 @@
 @media (min-width: @desktop-width) {
   .about-school {
     padding: 60px 105px 150px 105px;
-    background-position-y: 80px;
+  }
+
+  .about-school::before {
+    top: 70px;
+    right: -170px;
+
+    width: 550px;
+    height: 550px;
   }
 
   .about-school__heading {

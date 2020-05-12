@@ -22,6 +22,11 @@
   font-family: "GothamCond-Light";
   src: url("../fonts/GothamCond-Light.woff2") format("woff2"), url("../fonts/GothamCond-Light.woff") format("woff");
 }
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 body {
   min-width: 320px;
   margin: 0;
@@ -50,7 +55,6 @@ img {
   overflow: hidden;
 }
 .container {
-  border: 1px solid red;
   width: 320px;
   margin: 0 auto;
   padding: 0;
@@ -60,9 +64,9 @@ img {
     width: 768px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
   .container {
-    width: 1200px;
+    width: 1100px;
   }
 }
 .button {
@@ -84,16 +88,15 @@ img {
 .page-header__logo-wrapper {
   position: relative;
   width: 320px;
-  box-shadow: 0 1px 0 0 #404040, 0 3px 0 0 #870505;
 }
 .page-header__logo-wrapper::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 86px;
-  height: 99px;
-  background-image: url('../img/logo-transparent.svg');
+  top: -20px;
+  left: -30px;
+  width: 130px;
+  height: 130px;
+  background-image: url('../img/logo-transparent-red.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -109,27 +112,34 @@ img {
   .page-header {
     flex-direction: row;
     justify-content: space-between;
-    box-shadow: 0 1px 0 0 #404040, 0 3px 0 0 #870505;
+  }
+  .page-header__wrapper {
+    background-image: url('../img/3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
   .page-header__logo-wrapper {
+    padding: 0;
+    margin: 0;
     width: auto;
     box-shadow: none;
   }
   .page-header__logo-image {
     width: 122px;
     height: 51px;
-    margin-right: 80px;
     padding-left: 113px;
   }
   .page-header__logo-wrapper::before {
-    width: 106px;
-    height: 118px;
+    top: -30px;
+    width: 150px;
+    height: 150px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
   .page-header {
-    padding-right: 105px;
-    background: linear-gradient(to right, #121212 50%, #870505 50%);
+    padding-right: 5%;
+    box-sizing: border-box;
     box-shadow: none;
   }
 }
@@ -215,7 +225,8 @@ img {
 @media (min-width: 768px) {
   .main-nav {
     padding: 0 30px;
-    width: auto;
+    width: 650px;
+    box-sizing: border-box;
   }
   .main-nav__list {
     display: flex;
@@ -231,7 +242,10 @@ img {
     text-align: right;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
+  .main-nav {
+    width: auto;
+  }
   .main-nav__item a {
     width: auto;
     padding: 10px 0;
@@ -244,108 +258,135 @@ img {
   margin: 0;
   padding: 0;
   min-height: 420px;
-  background-image: url('../img/background-photo.jpg');
-  background-position: center;
-  background-size: 100%;
+  background-image: url('../img/3.jpg');
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.hello-screen__wrapper {
+  margin: 0;
+  padding: 35px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .hello-screen__heading {
-  display: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: 'CenturaRoundBlack', sans-serif;
+  font-size: 56px;
+  line-height: calc(56px * 1.2);
+}
+.hello-screen__heading--small {
+  position: absolute;
+  top: 33px;
+  left: 86px;
+  font-family: 'BlackDiamond', sans-serif;
+  font-weight: normal;
+  color: #870505;
 }
 .hello-screen__description {
   margin: 0;
-  padding: 315px 35px 0 0;
-  text-align: right;
+  margin-top: 25px;
+  padding: 0;
   font-family: 'CenturaRound', sans-serif;
-  font-size: 22px;
-  line-height: calc(22px * 1.2);
+  font-size: 20px;
+  line-height: calc(20px * 1.2);
 }
 .hello-screen__button {
-  width: 180px;
-  box-sizing: border-box;
+  width: 192px;
   margin: 0;
-  margin-top: 15px;
-  margin-right: 35px;
-  padding: 10px;
+  margin-top: auto;
+  padding: 15px;
+  font-size: 19px;
   text-align: center;
-  float: right;
 }
 @media (min-width: 768px) {
   .hello-screen {
-    min-height: 650px;
-    background-image: url('../img/background-photo-tablet.jpg');
-    background-position-y: 3px;
-  }
-  .hello-screen__description {
-    padding: 458px 60px 0 0;
-    font-size: 40px;
-    line-height: calc(40px * 1.2);
-  }
-  .hello-screen__button {
-    width: 324px;
-    margin-top: 20px;
-    margin-right: 60px;
-    padding: 20px;
-    font-size: 32px;
-    line-height: calc(32px * 1.2);
-  }
-}
-@media (min-width: 1200px) {
-  .hello-screen {
-    min-height: 620px;
-    background-color: #870505;
-    background-image: url('../img/background-photo-full.jpg');
-    background-position: left top;
-    background-size: auto;
+    background: none;
+    min-height: 520px;
   }
   .hello-screen__wrapper {
-    width: 433px;
     margin: 0;
-    padding: 77px 0 0 650px;
+    margin-top: 60px;
+    margin-left: 8%;
+    padding: 0;
+    width: 324px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .hello-screen__heading {
-    display: block;
-    margin: 0;
-    padding: 0;
-    font-family: 'CenturaRoundBlack', sans-serif;
-    font-size: 115px;
-    line-height: calc(115px * 1.2);
+    font-size: 84px;
+    line-height: calc(84px * 1.2);
   }
   .hello-screen__heading--small {
-    margin: 0;
-    margin-top: -50px;
-    margin-left: 183px;
-    padding: 0;
-    font-family: 'BlackDiamond', sans-serif;
-    color: #121212;
-    font-weight: normal;
+    position: absolute;
+    top: 50px;
+    left: 135px;
   }
   .hello-screen__description {
-    margin: 0;
-    margin-top: -20px;
-    padding: 0;
-    font-size: 46px;
-    line-height: calc(46px * 1.2);
-    text-align: center;
+    margin-top: 30px;
+    font-size: 30px;
+    line-height: calc(30px * 1.2);
   }
   .hello-screen__button {
-    width: 375px;
-    margin: 0 auto;
-    margin-top: 35px;
+    width: 288px;
+    box-sizing: border-box;
+    margin: 0;
+    margin-top: 15px;
+    padding: 22px;
+    font-size: 29px;
+    text-align: center;
+  }
+}
+@media (min-width: 1100px) {
+  .hello-screen__wrapper {
+    margin-left: 13%;
+    width: 430px;
+  }
+  .hello-screen__heading {
+    font-size: 114px;
+    line-height: calc(114px * 1.2);
+  }
+  .hello-screen__heading--small {
+    position: absolute;
+    top: 70px;
+    left: 170px;
+  }
+  .hello-screen__description {
+    margin-top: 60px;
+    font-size: 41px;
+    line-height: calc(41px * 1.2);
+  }
+  .hello-screen__button {
+    width: 396px;
+    box-sizing: border-box;
+    margin: 0;
+    margin-top: 20px;
     padding: 25px;
-    font-size: 37px;
-    line-height: calc(37px * 1.2);
-    color: #870505;
-    background-color: #ffffff;
-    float: none;
+    font-size: 39px;
+    text-align: center;
   }
 }
 .about-school {
+  position: relative;
   margin: 0;
-  padding: 100px 20px  0 20px;
-  background-image: url('../img/logo-about-school.svg');
-  background-position: top right;
+  padding: 100px 20px 0 20px;
+}
+.about-school::before {
+  content: "";
+  position: absolute;
+  width: 234px;
+  height: 234px;
+  top: 0;
+  right: -80px;
+  background-image: url('../img/logo-transparent-red.svg');
   background-repeat: no-repeat;
+  background-size: contain;
 }
 .about-school__heading {
   margin: 0;
@@ -369,10 +410,12 @@ img {
   .about-school {
     margin: 0;
     padding: 165px 30px 150px 30px;
-    background-image: url('../img/logo-about-school-tablet.svg');
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-position-y: 170px;
+  }
+  .about-school::before {
+    top: 130px;
+    right: -100px;
+    width: 550px;
+    height: 550px;
   }
   .about-school__heading {
     font-size: 36px;
@@ -388,10 +431,15 @@ img {
     line-height: calc(18px * 1.2);
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
   .about-school {
     padding: 60px 105px 150px 105px;
-    background-position-y: 80px;
+  }
+  .about-school::before {
+    top: 70px;
+    right: -170px;
+    width: 550px;
+    height: 550px;
   }
   .about-school__heading {
     margin-top: 87px;
@@ -554,7 +602,7 @@ img {
     line-height: calc(18px * 1.2);
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
   .teachers {
     padding: 60px 105px 0 105px;
   }
