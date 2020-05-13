@@ -119,6 +119,7 @@
   padding-right: 20px;
   padding-left: 135px;
   background-color: @price-card-1;
+
 }
 
 .price__item:nth-child(2n) {
@@ -129,11 +130,25 @@
 
 .price__name {
   margin: 0;
-  margin-bottom: 5px;
   padding: 0;
+
   font-family: 'CenturaRoundBlack', sans-serif;
   font-size: 18px;
   line-height: calc(18px * 1.2);
+  text-align: center;
+}
+
+.price__red {
+  color: @dark-red;
+}
+
+.price__duration {
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+
+  font-size: 12px;
+  line-height: calc(12px * 1.2);
   text-align: center;
 }
 
@@ -153,7 +168,7 @@
   text-align: center;
 }
 
-@media (min-width: 787px) {
+@media (min-width: @tablet-width) {
   .price {
     margin-top: 320px;
     padding: 0 30px;
@@ -184,6 +199,22 @@
     line-height: calc(48px * 1.2);
   }
 
+  .price__item {
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+
+    flex-grow: 1;
+  }
+
+  .price .price__item--3 {
+    background-color: @price-card-2;
+  }
+
+  .price .price__item--4 {
+    background-color: @price-card-1;
+  }
+
   .price__description {
     width: 500px;
     margin: 0 auto;
@@ -204,27 +235,11 @@
     line-height: calc(20px * 1.2);
   }
 
-  .price__item {
-    padding: 15px 10px;
-    display: flex;
-    flex-direction: column;
-
-    flex-grow: 1;
-  }
-
   .price__about {
     width: 192px;
 
     font-size: 18px;
     line-height: calc(18px * 1.2);
-  }
-
-  .price__list .price__item--3 {
-    background-color:  @price-card-2;
-  }
-
-  .price__list .price__item--4 {
-    background-color: @price-card-1;
   }
 
   .price__button {
@@ -234,5 +249,72 @@
 
     font-size: 18px;
     line-height: calc(18px * 1.2);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .price__list {
+    margin: 0 auto;
+    width: 990px;
+    box-sizing: border-box;
+  }
+
+  .price__item {
+    width: 330px;
+    padding-right: 30px;
+    box-sizing: border-box;
+  }
+
+  .price::before {
+    width: 1100px;
+    height: 150px;
+    top: -149px;
+
+    background-image: url('../img/red-top-desktop.svg');
+  }
+
+  .price::after {
+    width: 1100px;
+    height: 150px;
+    bottom: -149px;
+
+    background-image: url('../img/red-top-desktop.svg');
+  }
+
+  .price__heading {
+    margin-bottom: 0;
+  }
+
+  .price .price__item--3 {
+    background-color: @price-card-1;
+  }
+
+  .price .price__item--4 {
+    background-color: @price-card-2;
+  }
+
+  .price__item:nth-child(2n) {
+    padding-right: 30px;
+    padding-left: 135px;
+  }
+
+  .price__item:nth-child(2n)::before {
+    bottom: 0;
+    left: 0;
+    transform: scale(-1, 1);
+  }
+
+  .price__about {
+    width: auto;
+  }
+
+  .price .price__item--2::before {
+    bottom: -19px;
+    left: -12px;
+  }
+
+  .price .price__item--6::before {
+    bottom: -15px;
+    left: -14px;
   }
 }

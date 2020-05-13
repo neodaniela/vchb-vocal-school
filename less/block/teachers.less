@@ -11,13 +11,14 @@
   font-family: 'CenturaRoundBlack', sans-serif;
   font-size: 30px;
   line-height: calc(30px * 1.2);
-  text-align: center;
+  text-align: left;
 }
 
 .teachers__description {
   margin: 0;
   margin-bottom: 25px;
   padding: 0;
+  width: 280px;
 
   font-family: 'CenturaRound', sans-serif;
   font-size: 16px;
@@ -36,19 +37,21 @@
   margin: 0;
   margin-bottom: 30px;
   padding: 0;
-  padding-top: 155px;
-  min-height: 370px;
+  padding-top: 165px;
+  padding-bottom: 20px;
+
+  width: 280px;
+  height: auto;
   box-sizing: border-box;
 
-  background-image: url('../img/teacher-card-background.svg');
-  background-repeat: no-repeat;
-  background-position-y: 31px;
+  background: linear-gradient(to bottom, transparent 160px, rgba(134, 13, 13, 0.75) 160px, rgba(134, 13, 13, 0.75) 210px, @teacher-card-color 210px);
 }
 
 .teachers__image {
   position: absolute;
   top: 0;
   left: 0;
+
   margin: 0;
   padding: 0;
 
@@ -59,49 +62,23 @@
 }
 
 .teachers__name {
-  position: absolute;
-  right: 15px;
-  top: 80px;
+  margin: 0;
+  padding: 0;
 
   font-family: 'CenturaRoundBlack', sans-serif;
   font-size: 30px;
   line-height: calc(30px * 1.2);
-
-  transform: rotate(-11deg);
-}
-
-.teachers__title {
-  position: absolute;
-  right: 15px;
-  top: 135px;
-
-  margin: 0;
-  padding: 0;
-
-  font-family: 'BlackDiamond', sans-serif;
-  font-size: 20px;
-  line-height: calc(20px * 1.2);
-  color: @dark-red;
-  text-align: right;
-
-  z-index: 2;
+  text-align: center;
 }
 
 .teachers__about {
   margin: 0;
-  margin-top: 7px;
+  margin-bottom: 10px;
   padding: 0 13px;
   text-align: center;
 }
 
-.teachers__about--main {
-  text-align: right;
-}
-
 .teachers__button {
-  position: absolute;
-  bottom: 12px;
-  left: 71px;
   margin: 0 auto;
   padding: 10px 0;
 
@@ -143,36 +120,31 @@
 
   .teachers__item {
     width: 339px;
-    min-height: 447px;
-    padding: 190px 15px 0 15px;
+    padding: 160px 15px 30px 15px;
 
-    background-size: contain;
-    background-position-y: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .teachers__name {
-    position: absolute;
-    right: 15px;
-    top: 100px;
-
     font-size: 36px;
     line-height: calc(36px * 1.2);
   }
 
-  .teachers__title {
-    top: 170px;
-  }
-
   .teachers__about {
-    margin-top: 10px;
+    margin-bottom: 15px;
 
     font-size: 18px;
     line-height: calc(18px * 1.2);
   }
 
+  .teachers__about--main {
+    margin-top: -5px;
+  }
+
   .teachers__button {
-    bottom: 14px;
-    left: 86px;
+    margin-top: auto;
     padding: 15px 0;
 
     width: 175px;
